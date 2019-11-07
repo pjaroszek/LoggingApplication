@@ -1,22 +1,22 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
-using Microsoft.Practices.EnterpriseLibrary.Logging;
+﻿using Microsoft.Practices.EnterpriseLibrary.Logging;
 using System;
 
 namespace Library.Enterprise
 {
     public class LoggingEnterprise
     {
-        private readonly IConfigurationSource configurationSource = ConfigurationSourceFactory.Create();
+        private readonly LoggingConfiguration loggingConfiguration = EnterpriseConfiguration.BuildProgrammaticConfig();//new EnterpriseConfiguration();
 
         public void LogIn(System.Diagnostics.TraceEventType traceEventType, string logMessage)
         {
-            LogWriterFactory logWriterFactory = new LogWriterFactory(configurationSource);
-            Logger.SetLogWriter(logWriterFactory.Create());
-            if (!Logger.IsLoggingEnabled())
+
+            var defaultWriter = new LogWriter(loggingConfiguration);
+
+            if (!defaultWriter.IsLoggingEnabled())
             {
                 return;
             }
-            Logger.Writer.Write(new LogEntry()
+            defaultWriter.Write(new LogEntry()
             {
                 Severity = traceEventType,
                 TimeStamp = DateTime.Now,

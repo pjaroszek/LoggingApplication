@@ -7,7 +7,7 @@ namespace Library.Enterprise
 {
     public class EnterpriseConfiguration
     {
-        private static LoggingConfiguration BuildProgrammaticConfig()
+        public static LoggingConfiguration BuildProgrammaticConfig()
         {
             // Formatter
             var formatter = new TextFormatter();
