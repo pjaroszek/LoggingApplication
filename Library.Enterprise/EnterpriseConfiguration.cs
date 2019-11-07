@@ -3,7 +3,7 @@ using Microsoft.Practices.EnterpriseLibrary.Logging.Formatters;
 using Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners;
 using System.Diagnostics;
 
-namespace Library.Enterprise
+namespace Jaroszek.ProofOfConcept.Library.Enterprise
 {
     public class EnterpriseConfiguration
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{F6D3AFA9-A9F1-4408-A1E5-F8948E4D2428}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Library.Enterprise</RootNamespace>
+    <RootNamespace>Jaroszek.ProofOfConcept.Library.Enterprise</RootNamespace>
     <AssemblyName>Library.Enterprise</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

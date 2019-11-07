@@ -1,0 +1,23 @@
+﻿using Jaroszek.ProofOfConcept.Library.Enterprise;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Library.Enterprise.Test
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        private LoggingEnterprise loggingEnterprise;
+        private void Execute()
+        {
+            loggingEnterprise = new LoggingEnterprise();
+        }
+
+        [TestMethod]
+        public void LoggingEnterpriseTestsWriteLogToFile()
+        {
+            Execute();
+            loggingEnterprise.LogIn(System.Diagnostics.TraceEventType.Information, "Test logu");
+
+        }
+    }
+}
