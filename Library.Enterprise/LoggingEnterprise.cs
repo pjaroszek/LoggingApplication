@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Logging;
 using System;
 
-namespace Library.Enterprise
+namespace Jaroszek.ProofOfConcept.Library.Enterprise
 {
     public class LoggingEnterprise
     {
