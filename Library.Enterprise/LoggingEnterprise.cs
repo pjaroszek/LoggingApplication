@@ -20,7 +20,7 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
             {
                 Severity = traceEventType,
                 TimeStamp = DateTime.Now,
-                Message = traceEventType + " " + logMessage
+                Message = logMessage
             });
 
         }
