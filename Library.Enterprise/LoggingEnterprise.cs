@@ -14,7 +14,7 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
 
             var defaultWriter = new LogWriter(loggingConfiguration);
             // dla konfiguracji pobieranej z App.config
-         //   var defaultWriterAppConfig = logWriterFactory.Create();
+            //   var defaultWriterAppConfig = logWriterFactory.Create();
 
             if (!defaultWriter.IsLoggingEnabled())
             {
@@ -31,7 +31,7 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
             defaultWriter.Write("Log entry with a category, priority, and event ID.",
                 "General", 6, 9001);
             defaultWriter.Write("Log entry with a category, priority, event ID, "
-                                + "and severity.", "General", 5, 9002,
+                               + "and severity.", "General", 5, 9002,
                 TraceEventType.Warning);
             defaultWriter.Write("Log entry with a category, priority, event ID, "
                                 + "severity, and title.", "General", 8, 9003,

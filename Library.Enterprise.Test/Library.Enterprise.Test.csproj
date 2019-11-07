@@ -8,7 +8,7 @@
     <ProjectGuid>{4E900455-8958-447B-A153-0FBA2670854B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Library.Enterprise.Test</RootNamespace>
+    <RootNamespace>Jaroszek.ProofOfConcept.Library.Enterprise.Test</RootNamespace>
     <AssemblyName>Library.Enterprise.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
