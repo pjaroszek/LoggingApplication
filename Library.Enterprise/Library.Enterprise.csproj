@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnterpriseConfiguration.cs" />
     <Compile Include="LoggingEnterprise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
