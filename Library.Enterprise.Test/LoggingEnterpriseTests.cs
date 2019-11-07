@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Library.Enterprise.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class LoggingEnterpriseTests
     {
         private LoggingEnterprise loggingEnterprise;
         private void Execute()
