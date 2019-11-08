@@ -16,7 +16,7 @@ namespace Library.Enterprise.Test
         public void LoggingEnterpriseTestsWriteLogToFile()
         {
             Execute();
-            loggingEnterprise.LogIn(System.Diagnostics.TraceEventType.Information, "Test logu");
+            loggingEnterprise.LogIn(System.Diagnostics.TraceEventType.Information, "Test logu", 10, 4);
 
         }
 
@@ -25,7 +25,7 @@ namespace Library.Enterprise.Test
         public void LooggingEnterpriseTestAsyncWriteLof()
         {
             Execute();
-            loggingEnterprise.LogIn(System.Diagnostics.TraceEventType.Information, "Test logu Async", true);
+            loggingEnterprise.LogIn(System.Diagnostics.TraceEventType.Information, "Test logu Async", 1, 1, true);
         }
     }
 }
