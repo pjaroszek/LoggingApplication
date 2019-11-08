@@ -9,20 +9,16 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
     {
         public static LoggingConfiguration BuildProgrammaticConfig(bool isAsync = false)
         {
-            // Formatter
+
             var formatter = new TextFormatter();
-
-
-            // Trace Listeners
 
             var flatFileTraceListener = new FlatFileTraceListener(@"FlatFile.log",
                 "----------------------------------------",
                 "----------------------------------------",
                 formatter);
 
-
-            var eventLog = new EventLog("Application", ".", "LoggingApplication");
-            var eventLogTraceListener = new FormattedEventLogTraceListener(eventLog, formatter);
+            //   var eventLog = new EventLog("Application", ".", "LoggingApplication");
+            //   var eventLogTraceListener = new FormattedEventLogTraceListener(eventLog, formatter);
 
             // Build Configuration
             var config = new LoggingConfiguration();
