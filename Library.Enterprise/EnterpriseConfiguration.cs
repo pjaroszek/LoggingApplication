@@ -7,7 +7,7 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
 {
     public class EnterpriseConfiguration
     {
-        public static LoggingConfiguration BuildProgrammaticConfig()
+        public static LoggingConfiguration BuildProgrammaticConfig(bool isAsync = false)
         {
             // Formatter
             var formatter = new TextFormatter();
@@ -26,9 +26,20 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
 
             // Build Configuration
             var config = new LoggingConfiguration();
-            config.AddLogSource("General", SourceLevels.All, true)
-                // .AddTraceListener(eventLogTraceListener);
-                .AddTraceListener(flatFileTraceListener);
+
+            if (isAsync == false)
+            {
+                config.AddLogSource("General", SourceLevels.All, true)
+                    // .AddTraceListener(eventLogTraceListener);
+                    .AddTraceListener(flatFileTraceListener);
+            }
+            else
+            {
+                config.AddLogSource("General", SourceLevels.All, true)
+                     // .AddTraceListener(eventLogTraceListener);
+                     .AddAsynchronousTraceListener(flatFileTraceListener);
+            }
+
 
             config.IsTracingEnabled = true;
             return config;
