@@ -12,17 +12,17 @@ namespace Jaroszek.ProofOfConcept.Library.Enterprise
         public void LogIn(System.Diagnostics.TraceEventType traceEventType, string logMessage, int priority = 0, int eventId = 0, bool isAsync = false)
         {
             LogWriter defaultWriter;
-            if (isAsync)
-            {
-                defaultWriter = new LogWriter(loggingConfigurationAsync);
-            }
-            else
-            {
-                defaultWriter = new LogWriter(loggingConfiguration);
-            }
+            //            if (isAsync)
+            //            {
+            //                defaultWriter = new LogWriter(loggingConfigurationAsync);
+            //            }
+            //            else
+            //            {
+            //                defaultWriter = new LogWriter(loggingConfiguration);
+            //            }
 
             // dla konfiguracji pobieranej z App.config
-            // defaultWriter = logWriterFactory.Create();
+            defaultWriter = logWriterFactory.Create();
 
             if (!defaultWriter.IsLoggingEnabled())
             {

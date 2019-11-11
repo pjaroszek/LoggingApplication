@@ -1,7 +1,6 @@
-﻿using Jaroszek.ProofOfConcept.Library.Enterprise;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Library.Enterprise.Test
+namespace Jaroszek.ProofOfConcept.Library.Enterprise.Test
 {
     [TestClass]
     public class LoggingEnterpriseTests
