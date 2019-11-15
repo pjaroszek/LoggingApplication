@@ -3,11 +3,15 @@
 namespace Jaroszek.ProofOfConcept.SeriLogLogging.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class SeriLogTest
     {
+        SeriLogEngine.SeriLogLogging seriLogLoggingEngine = new SeriLogEngine.SeriLogLogging();
+
         [TestMethod]
-        public void TestMethod1()
+        public void CreateNewLog()
         {
+            seriLogLoggingEngine.LogIn();
+
         }
     }
 }
