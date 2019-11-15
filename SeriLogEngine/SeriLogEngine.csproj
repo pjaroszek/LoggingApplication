@@ -59,8 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SerilogLogger.cs" />
     <Compile Include="SeriLogLogging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetConfigurationLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

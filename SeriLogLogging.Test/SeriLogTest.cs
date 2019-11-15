@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Jaroszek.ProofOfConcept.SeriLogEngine;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Serilog;
 
 namespace Jaroszek.ProofOfConcept.SeriLogLogging.Test
 {
@@ -10,7 +12,11 @@ namespace Jaroszek.ProofOfConcept.SeriLogLogging.Test
         [TestMethod]
         public void CreateNewLog()
         {
-            seriLogLoggingEngine.LogIn();
+            // seriLogLoggingEngine.LogIn();
+            Log.Logger = SetConfigurationLogger.GetLogger();
+
+            Log.Logger.Information("error test");
+            Log.CloseAndFlush();
 
         }
     }
